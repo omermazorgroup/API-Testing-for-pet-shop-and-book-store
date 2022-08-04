@@ -1,0 +1,7 @@
+**/pet_store/pytest_cache/
+**/pet_store/__pycache__/
+**/pet_store/allure_result/
+
+**/book_store/pytest_cache/
+**/book_store/__pycache__/
+**/book_store/allure_result/
