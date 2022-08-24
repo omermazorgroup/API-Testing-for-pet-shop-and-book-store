@@ -1,6 +1,24 @@
 # API-Testing-for-pet-shop-and-book-store 
 ## by Omer Mazor
 
+#### Fixing issues:
+I added two commits of changes that I performed 
+for fixing the project:
+* First I organized the project using folders and 
+  subsequently I changed the path in importing 
+  the files and models
+* In bookstore branch I removed token.txt file 
+  which contained the expiration date Bearer token and 
+  instead I used fixture that which 
+  updates new token with every api request
+* I rename the test files so that 
+  they start with the word "test"
+* The user can choose the url 
+* Maximum use of objects
+* The url addresses of the api are 
+  parameters received from the command line
+
+
 # Introdaction
 In this project I created a tests for two Swagger API:
  - petstore: https://petstore3.swagger.io/
