@@ -1,5 +1,5 @@
 # coding: utf-8
-from baseObj import baseObj
+from fix_API_testing.pet_store.models.baseObj import baseObj
 
 
 class Category(baseObj):

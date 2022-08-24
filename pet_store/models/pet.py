@@ -1,7 +1,7 @@
 import json
-from baseObj import baseObj
-from category import Category
-from tags import Tags
+from fix_API_testing.pet_store.models.baseObj import baseObj
+from fix_API_testing.pet_store.models.category import Category
+from fix_API_testing.pet_store.models.tags import Tags
 
 
 class Pet(baseObj):
@@ -50,6 +50,8 @@ class Pet(baseObj):
                 raise ValueError("status must be one of: available/sold/pending")
             self._status = status
 
+    def __eq__(self, other):
+        return self._id == other.id and self._name == other.name and self._status == other.status
 
     @property
     def id(self):

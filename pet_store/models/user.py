@@ -1,4 +1,4 @@
-from baseObj import baseObj
+from fix_API_testing.pet_store.models.baseObj import baseObj
 
 
 class User(baseObj):
@@ -48,6 +48,9 @@ class User(baseObj):
             if not str(userStatus).isdigit():
                 raise TypeError("user status name must be a integer")
             self._userStatus = userStatus
+
+    def __eq__(self, other):
+        return self._id == other.id
 
     @property
     def id(self):

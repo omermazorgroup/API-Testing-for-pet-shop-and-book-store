@@ -1,4 +1,4 @@
-from baseObj import baseObj
+from fix_API_testing.pet_store.models.baseObj import baseObj
 import datetime
 
 
@@ -21,9 +21,6 @@ class Order(baseObj):
             if not str(quantity).isdigit():
                 raise TypeError("order quantity must be a integer!")
             self._quantity = quantity
-        if shipDate is not None:
-            if not isinstance(shipDate, datetime.datetime):
-                raise TypeError("order shipDate must be a datetime!")
             self._shipDate = shipDate
         if status is not None:
             if not isinstance(status, str):
@@ -35,6 +32,9 @@ class Order(baseObj):
             if not isinstance(complete, bool):
                 raise TypeError("order complete must be a boolean!")
             self._complete = complete
+
+    def __eq__(self, other):
+        return self._id == other.id and self._petId == other.pet_id
 
     @property
     def id(self):
