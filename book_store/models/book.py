@@ -1,9 +1,9 @@
-from baseObj import baseObj
+from fix_API_testing.book_store.models.baseObj import baseObj
 import datetime
 
 
 class Book(baseObj):
-    def __init__(self, isbn: str, title: str, sum_title: str, author: str, publish_date: datetime, publisher: str,
+    def __init__(self, isbn: str, title: str, subTitle: str, author: str, publish_date: datetime, publisher: str,
                  pages: int, description: str, website: str):
         self._isbn = None
         self._title = None
@@ -23,16 +23,13 @@ class Book(baseObj):
             raise TypeError("Book title must be a string!")
         self._title = title
 
-        if not isinstance(sum_title, str):
+        if not isinstance(subTitle, str):
             raise TypeError("Book sum_title must be a string!")
-        self._sum_title = sum_title
+        self._subTitle = subTitle
 
         if not isinstance(author, str):
             raise TypeError("Book author must be a string!")
         self._author = author
-
-        if not isinstance(publish_date, datetime.datetime):
-            raise TypeError("Book publish date must be a Date!")
         self._publish_date = publish_date
 
         if not isinstance(publisher, str):
@@ -50,3 +47,7 @@ class Book(baseObj):
         if not isinstance(website, str):
             raise TypeError("Book website must be a string!")
         self._website = website
+
+    @property
+    def isbn(self) -> str:
+        return self._isbn

@@ -1,4 +1,4 @@
-from baseObj import baseObj
+from fix_API_testing.book_store.models.baseObj import baseObj
 
 
 class StringObject(baseObj):

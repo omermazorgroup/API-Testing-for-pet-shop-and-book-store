@@ -1,5 +1,5 @@
-from baseObj import baseObj
-from collectionOfIsbn import CollectionOfIsbn
+from fix_API_testing.book_store.models.baseObj import baseObj
+from fix_API_testing.book_store.models.collectionOfIsbn import CollectionOfIsbn
 
 
 class AddListBooks(baseObj):
