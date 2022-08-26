@@ -25,6 +25,8 @@ In this project I created a tests for two Swagger API:
  - bookstore:  https://bookstore.toolsqa.com/swagger/
 
 # Project Overview
+Create fix_API_testing folder and insert the project there
+
 ## petstore
 if you don't run the API on your server delete the url's parameters from the top 
 of the file pet_test.py, the default url after delete will be 'https://petstore3.swagger.io/api/v3'
